@@ -108,7 +108,7 @@ ddply(activity_na_false,.(interval),summarize,mean_steps=mean(steps))
 plot(activity_na_false_rollup2$interval,activity_na_false_rollup2$mean_steps,type="l")
 ```
 
-<img src="fix_render_thing_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="672" />
+<img src="figure/unnamed-chunk-6-1.png" title="" alt="" width="672" />
 
 ```r
 max_interval <- subset(activity_na_false_rollup2, activity_na_false_rollup2$mean_steps == max(activity_na_false_rollup2$mean_steps))
@@ -140,7 +140,7 @@ activity2_rollup1 <- ddply(activity2,.(date),summarize,sum_steps=sum(steps))
 hist(activity2_rollup1$sum_steps)
 ```
 
-<img src="fix_render_thing_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="672" />
+<img src="figure/unnamed-chunk-8-1.png" title="" alt="" width="672" />
 
 ```r
 mean(activity2_rollup1$sum_steps)
@@ -189,6 +189,6 @@ activity_for_panel <- rbind(activity_weekend_rollup,activity_weekday_rollup)
 xyplot(sum_steps~interval | day_group ,data=activity_for_panel,layout=c(1,2),type="a")
 ```
 
-<img src="fix_render_thing_files/figure-html/unnamed-chunk-9-1.png" title="" alt="" width="672" />
+<img src="figure/unnamed-chunk-9-1.png" title="" alt="" width="672" />
 
 
