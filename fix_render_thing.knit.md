@@ -80,7 +80,7 @@ activity_na_false_rollup1 <- ddply(activity_na_false,.(date),summarize,sum_steps
 hist(activity_na_false_rollup1$sum_steps)
 ```
 
-<img src="fix_render_thing_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="672" />
+<img src="figure/unnamed-chunk-5-1.png" title="" alt="" width="672" />
 
 ```r
 mean(activity_na_false_rollup1$sum_steps)
